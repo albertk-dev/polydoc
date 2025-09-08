@@ -42,3 +42,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 # On copie le reste de notre code
 COPY . .
+
+# === COMMANDE DE DÉMARRAGE POUR LA PRODUCTION ===
+# On dit à Render de lancer Uvicorn sur le port 4444
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "4444"]
