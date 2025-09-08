@@ -1,0 +1,19 @@
+# Dossiers de l'environnement virtuel Python
+venv/
+/venv/
+
+# Fichiers temporaires de l'application
+/temp_files/
+
+# Caches et fichiers compilés de Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Dossiers de configuration de l'IDE (PyCharm)
+.idea/
+
+# Fichiers système d'exploitation
+.DS_Store
+Thumbs.db

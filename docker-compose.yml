@@ -1,0 +1,16 @@
+services:
+  app:
+    # Construit l'image en utilisant le Dockerfile du dossier actuel
+    build: .
+
+    # La commande pour lancer le serveur web, avec rechargement automatique
+    command: uvicorn main:app --host 0.0.0.0 --port 4444 --reload
+
+    # Lie le port 4444 de ta machine à celui du conteneur
+    ports:
+      - "4444:4444"
+
+    # Synchronise le dossier actuel avec /app dans le conteneur
+    # C'est ce qui rend tes changements de code instantanés !
+    volumes:
+      - .:/app
